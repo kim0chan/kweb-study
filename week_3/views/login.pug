@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title Login Page
+
+    body
+        form(method='post' action='/login')
+            .id
+                label Username: 
+                input#username-input(name="username" type=text)
+            .pw
+                label Password: 
+                input#password-input(name="password" type=password)
+            button.btn Login
+        
