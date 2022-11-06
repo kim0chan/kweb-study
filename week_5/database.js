@@ -8,9 +8,10 @@ const pool = mysql.createPool({
     database: 'kweb_db',
 });
 
-const runQuery = async sql => {     //sql문을 받아서 결과 반환
+const runQuery = async (pstmt, data) => {     //sql문을 받아서 결과 반환
     const conn = await pool.getConnection();
     try {
+        const sql = conn.format(pstmt, data)
         const [result] = await conn.query(sql);
         return result;
     } finally {

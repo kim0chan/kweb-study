@@ -26,12 +26,12 @@ const createScore = async (name, course, midterm, final) => {
         console.log(`${course} (${cnt} people): Average ${avg}, Std.Dev. ${stddev}`);
     });
 
-    // const scoreData = await getScoreByIdName(2, 'Joe');
-    // const { course, final } = scoreData;
-    // console.log(`Course: ${course} / Final score: ${final}`);
+    const scoreData = await getScoreByIdName(2, 'Joe');
+    const { course, final } = scoreData;
+    console.log(`Course: ${course} / Final score: ${final}`);
 
-    // console.dir(await getScoreByIdName(9, 'Barack'));
-    // const newScore = await createScore('Barack', 'Operating Systems', 83, 62);
-    // console.dir(await getScoreByIdName(9, 'Barack'));
-    // console.dir(await getScoreByIdName(newScore.insertId, 'Barack'));
+    console.dir(await getScoreByIdName(9, 'Barack'));
+    const newScore = await createScore('Barack', 'Operating Systems', 83, 62);
+    console.dir(await getScoreByIdName(9, 'Barack'));
+    console.dir(await getScoreByIdName(newScore.insertId, 'Barack'));
 })();
