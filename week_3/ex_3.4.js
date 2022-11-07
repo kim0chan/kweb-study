@@ -8,7 +8,7 @@ app.set('view engine', 'pug');
 
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get('/fare', (req, res) => {
     res.render('login.pug');
 })
 

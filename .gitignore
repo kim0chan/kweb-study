@@ -1,3 +1,4 @@
 *.txt
 node_module/
 node_modules/
+*/database.js
